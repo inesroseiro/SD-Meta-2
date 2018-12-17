@@ -3,6 +3,7 @@ package album.action;
 
 import album.model.AlbumBean;
 import com.opensymphony.xwork2.ActionSupport;
+import dropsrc.src.Album;
 import org.apache.struts2.interceptor.SessionAware;
 
 import java.util.ArrayList;
@@ -23,6 +24,9 @@ public class AlbumAction extends ActionSupport implements SessionAware {
     private String olddate;
     private String oldgenre;
     private ArrayList<String> listaMusicas;
+    private ArrayList<String> artistas;
+    private ArrayList<String> albuns;
+
 
     public Map<String, Object> getSession() {
         return session;
@@ -130,6 +134,49 @@ public class AlbumAction extends ActionSupport implements SessionAware {
 
     }
 
+    public String executeSearchByAlbum(){
+        this.getSearchbyAlbumBean().setName(this.name);
+        String message = this.getSearchbyAlbumBean().searchByAlbum();
+
+        if (message.equals("type|search_album_name;error in search_album_name")) {
+            return ERROR;
+        }
+
+        else{
+            artistas = new ArrayList<String>();
+            albuns = new ArrayList<String>();
+
+            System.out.println("\t-Results-");
+            //Aqui correu tudo bem
+            String[] splitStringAll = message.split(";");
+            //get item count
+            String[] splitString1 = splitStringAll[1].split("\\|");
+            int itemCount = Integer.parseInt(splitString1[1]);
+            //get albums
+            int j = 2, size = splitStringAll.length;
+            while (j < size) {
+                String[] splitStringAlbumName = splitStringAll[j].split("\\|");
+                String album = splitStringAlbumName[1];
+                System.out.println("Album Name: " + album);
+                albuns.add(album);
+                String[] splitStringArtistName = splitStringAll[j + 1].split("\\|");
+                String artist = splitStringArtistName[1];
+                System.out.println("Artist Name: " + artist);
+                artistas.add(artist);
+                j += 2;
+            }
+            getSession().put("albuns", albuns);
+            getSession().put("artistas", artistas);
+
+
+
+        }
+
+        return SUCCESS;
+
+    }
+
+
 
 
 
@@ -176,6 +223,16 @@ public class AlbumAction extends ActionSupport implements SessionAware {
 
     public void viewDetailsAlbumBean(AlbumBean viewDetailsAlbumBean) {
         this.session.put("viewDetailsAlbumBean", viewDetailsAlbumBean);
+    }
+
+    public AlbumBean getSearchbyAlbumBean() {
+        if(!session.containsKey("viewSearchByAlbum"))
+            this.setSearchbyAlbumBean(new AlbumBean());
+        return (AlbumBean) session.get("viewSearchByAlbum");
+    }
+
+    public void setSearchbyAlbumBean(AlbumBean viewSearchByAlbum) {
+        this.session.put("viewSearchByAlbum", viewSearchByAlbum);
     }
 
 

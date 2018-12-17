@@ -30,7 +30,7 @@
                     <s:div id="centering2">
                         <p></p>
                     </s:div>
-                        <a href="searchByAlbumEditor.jsp" class="selectVal">Search by Album</a>
+                        <a href="searchbbyalbumed.jsp" class="selectVal">Search by Album</a>
                     <s:div id="centering2">
                         <p></p>
                     </s:div>

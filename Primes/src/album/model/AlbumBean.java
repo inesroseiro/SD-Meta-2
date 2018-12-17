@@ -69,6 +69,19 @@ public class AlbumBean extends UserBean {
         return result;
     }
 
+    public String searchByAlbum() {
+
+        String result = null;
+        try {
+            result = server.checkFromAlbumName("user",name);
+
+        } catch (RemoteException e) {
+            System.out.println(e.getMessage());
+        }
+
+        return result;
+    }
+
     public String getOldname() {
         return oldname;
     }

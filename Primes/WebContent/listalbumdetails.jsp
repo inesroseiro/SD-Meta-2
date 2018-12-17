@@ -9,7 +9,7 @@
 </head>
 <body>
 <s:div class="WelcomeTitle">
-	<h2> View artist details </h2>
+	<h2> View album details </h2>
 	<p> Artist Name </p>
 	${session.artist}
 	<p> Description </p>

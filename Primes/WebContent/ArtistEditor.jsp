@@ -39,17 +39,20 @@
                         <p></p>
                     </s:div>
                     <s:div class="text-center p-t-136">
-                        <a class="corner" href="index.jsp">
-                            Logout
-                        </a>
-                    </s:div>
-                    <s:div class="text-center p-t-136">
                         <a class="cornerMenu" href="editor.jsp">
                             Menu
                         </a>
                     </s:div>
                 </s:div>
             </s:form>
+            <s:form action="logout" method="post">
+                <s:div class="text-center p-t-136">
+                    <a class="corner" href="index.jsp">
+                        Logout
+                    </a>
+                </s:div>
+            </s:form>
+
         </s:div>
     </s:div>
 </s:div>

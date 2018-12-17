@@ -4,6 +4,7 @@ package critic.model;
 import model.UserBean;
 
 import java.rmi.RemoteException;
+import java.util.ArrayList;
 
 public class CriticBean extends UserBean {
 
@@ -12,6 +13,15 @@ public class CriticBean extends UserBean {
     private String critic;
     private String username;
 
+    private ArrayList<String> criticas;
+
+    public ArrayList<String> getCriticas() {
+        return criticas;
+    }
+
+    public void setCriticas(ArrayList<String> criticas) {
+        this.criticas = criticas;
+    }
 
     private int rate;
 

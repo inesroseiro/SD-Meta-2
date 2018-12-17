@@ -38,7 +38,7 @@
                     <s:div id="centering2">
                         <p></p>
                     </s:div>
-                        <a href="viewCriticsEditor.jsp" class="selectVal">View Critics</a>
+                        <a href="viewcriticsed.jsp" class="selectVal">View Critics</a>
                     <s:div id="createAccountCenter">
                         <p></p>
                     </s:div>

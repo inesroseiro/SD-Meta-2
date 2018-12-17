@@ -43,6 +43,21 @@ public class LoginBean extends UserBean {
         return result;
     }
 
+    public boolean register() {
+
+        boolean result = true;
+        try {
+            result = server.checkRegister(username,password);
+        } catch (RemoteException e) {
+            System.out.println(e.getMessage());
+        }
+        System.out.println(result);
+
+        System.out.println("sou o result " + result);
+
+        return result;
+    }
+
 
     public String getUsername() {
         return username;

@@ -37,8 +37,8 @@ and should reside on the classpath of the webapp (generally /WEB-INF/classes). -
           <result name="login">/user.jsp</result>
 
       </action>
-      <action name="signup" class="signup.action.SignUpAction" method="execute">
-          <result name="success">/user.jsp</result>
+      <action name="signup" class="login.action.LoginAction" method="executeRegister">
+          <result name="success">/index.jsp</result>
       </action>
       <action name="insertartist" class="artist.action.ArtistAction" method="execute">
           <result name="success">/editor.jsp</result>
@@ -82,6 +82,14 @@ and should reside on the classpath of the webapp (generally /WEB-INF/classes). -
       <action name="musicdetailseditor" class="music.action.MusicAction" method="executeViewMusicDetails">
           <result name="success">/listmusicdetails.jsp</result>
       </action>
+      <action name="viewcriticseditor" class="critic.action.CriticAction" method="executeViewCritics">
+          <result name="success">/listcriticdetails.jsp</result>
+      </action>
+
+      <action name="logout" class="LogoutAction" method="execute">
+          <result name="LOGOUT">/index.jsp</result>
+      </action>
+
 
 
   </package>

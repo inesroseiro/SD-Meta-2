@@ -6,6 +6,7 @@ import critic.model.CriticBean;
 import dropsrc.src.Critic;
 import org.apache.struts2.interceptor.SessionAware;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 
@@ -18,6 +19,16 @@ public class CriticAction extends ActionSupport implements SessionAware {
     private String critic;
     private String username;
     private int rate;
+    private ArrayList<String> criticas;
+    private ArrayList<String> users;
+
+    public ArrayList<String> getCriticas() {
+        return criticas;
+    }
+
+    public void setCriticas(ArrayList<String> criticas) {
+        this.criticas = criticas;
+    }
 
     public String getUsername() {
         return username;
@@ -91,37 +102,43 @@ public class CriticAction extends ActionSupport implements SessionAware {
 
         String message = this.getViewCriticsBean().getViewCritics();
 
-        String[] splitString = message.split(";");
+        String[] splitStringAll = message.split(";");
 
-        System.out.println("\t-Song Details-");
+        System.out.println("\t-Album critics-");
 
-        //aqui
-        String [] splitString3 =splitString[3].split("\\|");
-        String name = splitString3[1];
-        System.out.println("Music Name: " + name);
-        getSession().put("name", name);
+        String[] splitStringName = splitStringAll[1].split("\\|");
+        System.out.println("Artist name: " + splitStringName[1]);
+        getSession().put("artistname",splitStringName[1]);
 
-        String [] splitString4 =splitString[4].split("\\|");
-        String genre = splitString4[1];
-        System.out.println("Music Genre: " +genre);
-        getSession().put("genre", genre);
+        String [] splitString3 =splitStringAll[3].split("\\|");
+        System.out.println("Average Rate: " + splitString3[1]);
+        getSession().put("avgrate",splitString3[1]);
 
-        String [] splitString5 =splitString[5].split("\\|");
-        String duration = splitString5[1];
-        System.out.println("Duration: " + duration);
-        getSession().put("duration", duration);
+        criticas = new ArrayList<String>();
+        users = new ArrayList<String>();
 
 
-        String [] splitString6 =splitString[6].split("\\|");
-        String date = splitString6[1];
-        System.out.println("Release Date: " + date);
-        getSession().put("date", date);
 
 
-        String [] splitString7 =splitString[7].split("\\|");
-        String lyrics = splitString7[1];
-        System.out.println("Lyrics: " + lyrics);
-        getSession().put("lyrics", lyrics);
+        if(splitStringAll.length > 3) {
+            int j = 4, size = splitStringAll.length;
+            while(j < size) {
+                String[] splitStringArtistName = splitStringAll[j + 1].split("\\|");
+                String[] splitStringAlbumName = splitStringAll[j].split("\\|");
+                String critic = splitStringArtistName[1];
+                System.out.println("Critic: "+critic);
+                String user = splitStringAlbumName[1];
+                System.out.println("Username: " + user);
+                criticas.add(critic);
+                users.add(user);
+                j += 2;
+
+            }
+        }
+        getSession().put("listacriticas",criticas);
+        getSession().put("listausers",users);
+
+
 
         return SUCCESS;
 

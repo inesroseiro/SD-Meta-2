@@ -27,10 +27,10 @@ public class LoginAction extends ActionSupport implements SessionAware {
 
             if(this.getLoginBean().getAuthentication().equals("editor")){
                 getSession().put("username", getUsername());
-
                 return SUCCESS;
             }
             if(this.getLoginBean().getAuthentication().equals("user")){
+                getSession().put("username", getUsername());
                 return LOGIN;
             }
 
@@ -47,6 +47,20 @@ public class LoginAction extends ActionSupport implements SessionAware {
             }
             return ERROR;
     }
+
+    public String executeRegister(){
+        this.getRegisterBean().setUsername(username);
+        this.getRegisterBean().setPassword(password);
+        this.getChangeUserRightsBean().setUsername(this.username);
+        if(this.getRegisterBean().register()){
+            getSession().put("username", getUsername());
+            //System.out.println("sou o username: " + getUsername());
+            //System.out.println("session: " + getSession().put("username", getUsername()));
+            return SUCCESS;
+        }
+        return ERROR;
+    }
+
 
     public LoginBean getLoginBean() {
         if(!session.containsKey("loginBean"))
@@ -66,6 +80,16 @@ public class LoginAction extends ActionSupport implements SessionAware {
 
     public void setChangeUserRightsBean(LoginBean changeUserRights) {
         this.session.put("changeUserRights", changeUserRights);
+    }
+
+    public LoginBean getRegisterBean() {
+        if(!session.containsKey("registerBean"))
+            this.setRegisterBean(new LoginBean());
+        return (LoginBean) session.get("registerBean");
+    }
+
+    public void setRegisterBean(LoginBean registerBean) {
+        this.session.put("registerBean", registerBean);
     }
 
     public String getUsername() {

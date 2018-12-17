@@ -92,6 +92,9 @@ public class ArtistAction extends ActionSupport implements SessionAware {
 
         this.getViewArtistDetailsBean().setName(this.name);
         String message = this.getViewArtistDetailsBean().getViewArtistDetails();
+        if (message.equals("type|view_artist_details;error in view_artist_details")) {
+            return ERROR;
+        }
 
 
         String[] splitStringAll = message.split(";");

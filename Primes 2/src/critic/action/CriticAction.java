@@ -101,6 +101,9 @@ public class CriticAction extends ActionSupport implements SessionAware {
 
 
         String message = this.getViewCriticsBean().getViewCritics();
+        if (message.equals("type|view_album_critics;error in view_album_critics")) {
+            return ERROR;
+        }
 
         String[] splitStringAll = message.split(";");
 

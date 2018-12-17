@@ -33,9 +33,7 @@ public class AlbumAction extends ActionSupport implements SessionAware {
     }
 
     public String execute(){
-        // any username is accepted without confirmation (should check using RMI)
-        String usernameEleitor = (String) getSession().get("username");
-        //System.out.println("sou o username eleitor " + usernameEleitor);
+
         this.getInsertAlbumBean().setName(this.name);
         this.getInsertAlbumBean().setDescription(this.description);
         this.getInsertAlbumBean().setArtist(this.artist);
@@ -91,7 +89,9 @@ public class AlbumAction extends ActionSupport implements SessionAware {
         this.getViewAlbumDetailsBean().setArtist(this.artist);
 
         String message = this.getViewAlbumDetailsBean().getViewAlbumDetails();
-
+        if (message.equals("type|view_album_details;error_in_view_album_details")) {
+            return ERROR;
+        }
         String[] splitStringAll = message.split(";");
         String[] splitStringName = splitStringAll[1].split("\\|");
         String artist = splitStringName[1];
@@ -175,12 +175,6 @@ public class AlbumAction extends ActionSupport implements SessionAware {
         return SUCCESS;
 
     }
-
-
-
-
-
-
 
     public AlbumBean getInsertAlbumBean() {
         if(!session.containsKey("insertAlbumBean"))

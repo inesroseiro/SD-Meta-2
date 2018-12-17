@@ -45,11 +45,12 @@ public class LoginAction extends ActionSupport implements SessionAware {
     }
 
     public String execute2(){
-        this.getChangeUserRightsBean().setUsername(this.username);
-        if(this.getChangeUserRightsBean().changeUserRights()){
-                return SUCCESS;
-            }
-            return ERROR;
+        LoginBean lb = this.getChangeUserRightsBean();
+        lb.setUsername(this.username);
+        if(lb.changeUserRights()){
+            return SUCCESS;
+        }
+        return ERROR;
     }
 
     public String executeRegister(){

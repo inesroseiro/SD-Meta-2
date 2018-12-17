@@ -130,9 +130,11 @@ public class MusicAction extends ActionSupport implements SessionAware {
         String message = this.getViewMusicDetailsBean().getViewMusicDetails();
 
         String[] splitString = message.split(";");
+        if (message.equals("type|view_song_details;error_in_view_song_details")) {
+            return ERROR;
+        }
 
         System.out.println("\t-Song Details-");
-
         //aqui
         String [] splitString3 =splitString[3].split("\\|");
         String name = splitString3[1];

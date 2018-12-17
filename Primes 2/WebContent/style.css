@@ -1,0 +1,442 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Poppins-Regular, sans-serif;
+}
+
+.wrap-input100 {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 10px;
+
+}
+
+.input100 {
+    font-family: Poppins-Medium;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+    border: solid 0px black;
+    display: block;
+    background: #e6e6e6;
+    height: 50px;
+    border-radius: 25px;
+    padding: 0 30px 0 68px;
+    margin: auto;
+
+}
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+
+.container-login100 {
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+    background: black;
+}
+
+.wrap-login100 {
+    width: 1200px;
+    height: 650px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 100px 130px 33px 95px;
+    display: table;
+}
+
+.login100-form-title {
+    font-family: Poppins-Bold;
+    font-size: 24px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-bottom: 60px;
+}
+
+.container-login100-form-btn {
+    width: 35%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.login100-form-btn {
+    text-transform: uppercase;
+    border: solid 0px black;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background: #57b846;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    text-decoration: none;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('../fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url('../fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url('../fonts/montserrat/Montserrat-Bold.ttf');
+}
+
+button {
+    outline: none !important;
+    border: none;
+    background: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.login100-form-btn:hover {
+    background: black;
+}
+
+a {
+    font-family: Poppins-Regular;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666666;
+    margin: 0px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+}
+
+a:focus {
+    outline: none !important;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.txt2 {
+    font-family: Poppins-Regular;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #666666;
+    text-decoration: none;
+}
+
+#centering {
+    margin-bottom: 20px;
+}
+
+#createAccountCenter{
+    margin-top: 100px;
+}
+
+.loginVal {
+    text-transform: uppercase;
+    border: solid 0px black;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background: #57b846;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    text-decoration: none;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    text-decoration: none;
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.loginVal:hover{
+    background: black;
+    color: #fff;
+}
+
+.selectVal {
+    text-transform: uppercase;
+    border: solid 0px black;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background: black;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    text-decoration: none;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    text-decoration: none;
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.selectVal:hover{
+    background: #57b846;
+    color: #fff;
+}
+
+.select100-form-btn {
+    text-transform: uppercase;
+    border: solid 0px black;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background: black;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    text-decoration: none;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.select100-form-btn:hover {
+    background: #57b846;
+}
+
+
+.select100-form-title {
+    font-family: Poppins-Bold;
+    font-size: 24px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-bottom: 100px;
+}
+
+.artist100-form-title {
+    font-family: Poppins-Bold;
+    font-size: 24px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-bottom: 50px;
+}
+
+
+#centering2 {
+    margin: 15px;
+}
+
+.corner {
+    font-family: Poppins-Regular;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #666666;
+    text-decoration: none;
+    position: absolute;
+    top: 25px;
+    right: 10%;
+}
+
+.cornerMenu{
+    font-family: Poppins-Regular;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #666666;
+    text-decoration: none;
+    position: absolute;
+    top: 25px;
+    right: 15%;
+}
+
+
+.insert100 {
+    font-family: Poppins-Medium;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+    display: block;
+    height: 50px;
+    padding: 0 30px 0 68px;
+    margin: auto;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+
+}
+
+.insert100:hover {
+    border-bottom-color: black;
+    color: black;
+}
+
+#centering3{
+    margin-bottom: 70px;
+}
+
+.container-confirm100-form-btn {
+    width: 25%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.back {
+    font-family: Poppins-Regular;
+    font-size: 70px;
+    line-height: 1.5;
+    color: #666666;
+    text-decoration: none;
+    position: absolute;
+    top: 70%;
+}
+
+.insert100view {
+    font-family: Poppins-Medium;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+    display: block;
+    height: 50px;
+    padding: 0 30px 0 68px;
+    margin: auto;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    text-align: center;
+
+}
+
+.insert100view:hover {
+    color: #57b846;
+}
+
+.insert101 {
+    font-family: Poppins-Bold;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+    display: block;
+    padding: 0 30px 0 68px;
+    margin: auto;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    text-align: center;
+
+}
+
+.backView {
+    font-family: Poppins-Regular;
+    font-size: 70px;
+    line-height: 1.5;
+    color: #666666;
+    text-decoration: none;
+    position: absolute;
+}
+
+
+
+/*
+EDITOR MENU STUFF
+
+<s:div class="WelcomeTitle">
+	<h2> Menu editor </h2>
+	<a href="insertmusic.jsp"> <s:submit value="Insert Music"/> </a>
+	<p> </p>
+	<a href="insertartist.jsp"> <s:submit value="Insert Artist"/> </a>
+	<p> </p>
+	<a href="insertalbum.jsp"> <s:submit value="Insert Album"/> </a>
+	<p> </p>
+	<a href="editmusic.jsp"> <s:submit value="Edit Music"/> </a>
+	<p> </p>
+	<a href="editartist.jsp"> <s:submit value="Edit Artist"/> </a>
+	<p> </p>
+	<a href="editalbum.jsp"> <s:submit value="Edit Album"/> </a>
+
+
+
+</s:div>
+</body>
+</html>
+*/

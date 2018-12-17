@@ -91,7 +91,6 @@ and should reside on the classpath of the webapp (generally /WEB-INF/classes). -
       <action name="searchbyalbum" class="album.action.AlbumAction" method="executeSearchByAlbum">
           <result name="success">/resultalbumbyalbum.jsp</result>
       </action>
-
       <action name="logout" class="LogoutAction" method="execute">
           <result name="LOGOUT">/index.jsp</result>
       </action>

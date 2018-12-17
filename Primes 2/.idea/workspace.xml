@@ -9,14 +9,7 @@
     <list default="true" id="026b2ca0-a674-458d-882b-96b82e8dc3ff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/WebContent/error.jsp" afterPath="$PROJECT_DIR$/WebContent/error.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/unnamed/unnamed.war" afterPath="$PROJECT_DIR$/out/artifacts/unnamed/unnamed.war" />
-      <change beforePath="$PROJECT_DIR$/out/production/Primes/struts.xml" afterPath="$PROJECT_DIR$/out/production/Primes/struts.xml" />
-      <change beforePath="$PROJECT_DIR$/src/album/action/AlbumAction.java" afterPath="$PROJECT_DIR$/src/album/action/AlbumAction.java" />
-      <change beforePath="$PROJECT_DIR$/src/artist/action/ArtistAction.java" afterPath="$PROJECT_DIR$/src/artist/action/ArtistAction.java" />
-      <change beforePath="$PROJECT_DIR$/src/critic/action/CriticAction.java" afterPath="$PROJECT_DIR$/src/critic/action/CriticAction.java" />
-      <change beforePath="$PROJECT_DIR$/src/dropsrc/src/users88.txt" afterPath="$PROJECT_DIR$/src/dropsrc/src/users88.txt" />
-      <change beforePath="$PROJECT_DIR$/src/login/action/LoginAction.java" afterPath="$PROJECT_DIR$/src/login/action/LoginAction.java" />
-      <change beforePath="$PROJECT_DIR$/src/music/action/MusicAction.java" afterPath="$PROJECT_DIR$/src/music/action/MusicAction.java" />
+      <change beforePath="$PROJECT_DIR$/WebContent/style.css" afterPath="$PROJECT_DIR$/WebContent/style.css" />
       <change beforePath="$PROJECT_DIR$/src/struts.xml" afterPath="$PROJECT_DIR$/src/struts.xml" />
       <change beforePath="$PROJECT_DIR$/../Primes/.idea/misc.xml" afterPath="$PROJECT_DIR$/../Primes/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/../Primes/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Primes/.idea/workspace.xml" />
@@ -148,28 +141,28 @@
       <file leaf-file-name="struts.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/struts.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="688">
-              <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+            <state relative-caret-position="429">
+              <caret line="131" column="50" lean-forward="false" selection-start-line="131" selection-start-column="50" selection-end-line="131" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RMIClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dropsrc/src/RMIClient.java">
+      <file leaf-file-name="LoginAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/login/action/LoginAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="1143" column="13" lean-forward="false" selection-start-line="1140" selection-start-column="12" selection-end-line="1143" selection-end-column="13" />
+            <state relative-caret-position="370">
+              <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/user/action/UserAction.java">
+      <file leaf-file-name="LoginBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/login/model/LoginBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="466">
+              <caret line="37" column="9" lean-forward="false" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -188,9 +181,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>checkFromAr</find>
-      <find>searchAlbum</find>
-      <find>dingo</find>
       <find>poli</find>
       <find>$PROJECT_DIR$/../../Ficha6_WebProgramming/Primes/src/dropsrc/src/database1.txt</find>
       <find>pol</find>
@@ -217,6 +207,9 @@
       <find>checkviewartist</find>
       <find>checkcr</find>
       <find>critic</find>
+      <find>insert101</find>
+      <find>select-form</find>
+      <find>select100-form-ti</find>
       <find>songDe</find>
     </findStrings>
   </component>
@@ -231,7 +224,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/WebContent/removemusic.jsp" />
         <option value="$PROJECT_DIR$/WebContent/editmusic.jsp" />
         <option value="$PROJECT_DIR$/WebContent/writecritic.jsp" />
         <option value="$PROJECT_DIR$/WebContent/removealbum.jsp" />
@@ -275,12 +267,13 @@
         <option value="$PROJECT_DIR$/WebContent/AlbumUser.jsp" />
         <option value="$PROJECT_DIR$/WebContent/AlbumEditor.jsp" />
         <option value="$PROJECT_DIR$/WebContent/editorrights.jsp" />
-        <option value="$PROJECT_DIR$/src/login/action/LoginAction.java" />
-        <option value="$PROJECT_DIR$/WebContent/error.jsp" />
         <option value="$PROJECT_DIR$/src/album/action/AlbumAction.java" />
         <option value="$PROJECT_DIR$/src/artist/action/ArtistAction.java" />
         <option value="$PROJECT_DIR$/src/critic/action/CriticAction.java" />
         <option value="$PROJECT_DIR$/src/music/action/MusicAction.java" />
+        <option value="$PROJECT_DIR$/WebContent/style.css" />
+        <option value="$PROJECT_DIR$/WebContent/error.jsp" />
+        <option value="$PROJECT_DIR$/src/login/action/LoginAction.java" />
         <option value="$PROJECT_DIR$/src/struts.xml" />
       </list>
     </option>
@@ -345,31 +338,26 @@
               <item name="Primes 2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Primes 2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="artist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Primes 2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Primes 2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="critic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Primes 2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Primes 2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Primes 2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Primes 2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="music" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="action" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Primes 2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Primes 2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="signup" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Primes 2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Primes 2" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -560,7 +548,7 @@
       <workItem from="1544832716043" duration="31000" />
       <workItem from="1544832902024" duration="40094000" />
       <workItem from="1545007818354" duration="1058000" />
-      <workItem from="1545071744978" duration="7672000" />
+      <workItem from="1545071744978" duration="8584000" />
     </task>
     <task id="LOCAL-00001" summary="6">
       <created>1544727941555</created>
@@ -573,7 +561,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137813000" />
+    <option name="totallyTimeSpent" value="138725000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -586,6 +574,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -604,7 +593,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38705882" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38705882" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282353" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2923611" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -674,13 +663,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/dropsrc/src/Song.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/searchByAlbumEditor.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
@@ -834,26 +816,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/user.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/editor.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
           <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/listcriticdetails.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="49" column="51" lean-forward="false" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -938,14 +904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-33">
-          <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/editorrights.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
@@ -966,14 +924,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="41">
           <caret line="75" column="5" lean-forward="false" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -1073,22 +1023,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/login/model/LoginBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="37" column="9" lean-forward="false" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/login/action/LoginAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="47" column="20" lean-forward="false" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/music/model/MusicBean.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-37">
@@ -1105,14 +1039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dropsrc/src/RMIClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="1143" column="13" lean-forward="false" selection-start-line="1140" selection-start-column="12" selection-end-line="1143" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/user/action/UserAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1121,10 +1047,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="62" lean-forward="false" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/user.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="31" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/listcriticdetails.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="51" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="438" column="19" lean-forward="false" selection-start-line="438" selection-start-column="19" selection-end-line="438" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/error.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dropsrc/src/RMIClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="1143" column="13" lean-forward="false" selection-start-line="1140" selection-start-column="12" selection-end-line="1143" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/login/model/LoginBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="37" column="9" lean-forward="false" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/login/action/LoginAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/struts.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+        <state relative-caret-position="429">
+          <caret line="131" column="50" lean-forward="false" selection-start-line="131" selection-start-column="50" selection-end-line="131" selection-end-column="50" />
           <folding />
         </state>
       </provider>

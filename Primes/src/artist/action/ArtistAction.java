@@ -18,6 +18,7 @@ public class ArtistAction extends ActionSupport implements SessionAware {
     private String description;
 
     List<String> listaInformacoes;
+    List<String> listaAlbuns;
 
 
     public String getOldname() {
@@ -125,6 +126,44 @@ public class ArtistAction extends ActionSupport implements SessionAware {
 
     }
 
+    public String executeSearchByArtist(){
+        this.getSearchbyArtistBean().setName(this.name);
+        String message = this.getSearchbyArtistBean().searchByArtist();
+
+        if (message.equals("type|search_album_artist;error in search_album_artist")) {
+            return ERROR;
+        }
+
+        else{
+            listaAlbuns = new ArrayList<String>();
+
+            String[] splitStringAll = message.split(";");
+
+            System.out.println("\t-Results-");
+
+            String[] splitStringName = splitStringAll[1].split("\\|");
+            String artist = splitStringName[1];
+            System.out.println("Artist name: " + artist);
+            getSession().put("artist", artist);
+
+            int j = 3, size = splitStringAll.length;
+            while (j < size) {
+                String[] splitStringAlbumName = splitStringAll[j].split("\\|");
+                String album = splitStringAlbumName[1];
+                System.out.println("Album Name: " + album);
+                listaAlbuns.add(album);
+                j++;
+            }
+            getSession().put("listaAlbuns", listaAlbuns);
+
+        }
+
+        return SUCCESS;
+
+    }
+
+
+
     public List<String> getListaInformacoes() {
         return listaInformacoes;
     }
@@ -171,6 +210,16 @@ public class ArtistAction extends ActionSupport implements SessionAware {
 
     public void setViewArtistDetailsBean(ArtistBean viewDetailsArtistBean) {
         this.session.put("viewDetailsArtistBean", viewDetailsArtistBean);
+    }
+
+    public ArtistBean getSearchbyArtistBean() {
+        if(!session.containsKey("viewSearchByArtist"))
+            this.setSearchbyArtistBean(new ArtistBean());
+        return (ArtistBean) session.get("viewSearchByArtist");
+    }
+
+    public void setSearchbyArtistBean(ArtistBean viewSearchByArtist) {
+        this.session.put("viewSearchByArtist", viewSearchByArtist);
     }
 
     public String getName() {

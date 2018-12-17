@@ -70,6 +70,19 @@ public class ArtistBean extends UserBean {
         return result;
     }
 
+    public String searchByArtist() {
+
+        String result = null;
+        try {
+            result = server.checkFromArtistName("user",name);
+
+        } catch (RemoteException e) {
+            System.out.println(e.getMessage());
+        }
+
+        return result;
+    }
+
 
     public String getOldname() {
         return oldname;

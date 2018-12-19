@@ -1025,7 +1025,7 @@ public class RMIServer extends UnicastRemoteObject implements RMI, Serializable 
 	// =========================================================
 	public static void main(String args[]) {
 
-        System.getProperties().put("java.security.policy", "/Users/iroseiro/Desktop/Ficha6_WebProgramming/Primes/out/production/Primes/dropsrc/src/policy.all");
+        System.getProperties().put("java.security.policy", "/Users/iroseiro/Downloads/Entrega SD Meta 2/Source Code/src/dropsrc/src/policy.all");
         System.setSecurityManager(new RMISecurityManager());
 
 		try {

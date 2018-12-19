@@ -64,18 +64,20 @@ public class MusicAction extends ActionSupport implements SessionAware {
 
     public String execute(){
         // any username is accepted without confirmation (should check using RMI)
-        this.getInsertMusicBean().setName(this.name);
-        this.getInsertMusicBean().setGenre(this.genre);
-        this.getInsertMusicBean().setDuration(this.duration);
-        this.getInsertMusicBean().setDate(this.date);
-        this.getInsertMusicBean().setLyrics(this.lyrics);
-        this.getInsertMusicBean().setArtist(this.artist);
-        this.getInsertMusicBean().setAlbum(this.album);
-        this.getInsertMusicBean().setDate(this.date);
+        MusicBean mb = this.getInsertMusicBean();
 
-        this.getInsertMusicBean().setGenre(this.genre);
+        mb.setName(this.name);
+        mb.setGenre(this.genre);
+        mb.setDuration(this.duration);
+        mb.setDate(this.date);
+        mb.setLyrics(this.lyrics);
+        mb.setArtist(this.artist);
+        mb.setAlbum(this.album);
+        mb.setDate(this.date);
 
-        if(this.getInsertMusicBean().getInsertMusic()){
+        mb.setGenre(this.genre);
+
+        if(mb.getInsertMusic()){
             return SUCCESS;
         }
         else
@@ -84,21 +86,23 @@ public class MusicAction extends ActionSupport implements SessionAware {
 
     public String execute2(){
         // any username is accepted without confirmation (should check using RMI)
-        this.getEditMusicBean().setName(this.name);
-        this.getEditMusicBean().setGenre(this.genre);
-        this.getEditMusicBean().setDuration(this.duration);
-        this.getEditMusicBean().setDate(this.date);
-        this.getEditMusicBean().setLyrics(this.lyrics);
-        this.getEditMusicBean().setArtist(this.artist);
-        this.getEditMusicBean().setAlbum(this.album);
-        this.getEditMusicBean().setDate(this.date);
+        MusicBean mb = this.getEditMusicBean();
 
-        this.getEditMusicBean().setGenre(this.genre);
-        this.getEditMusicBean().setOldname(this.oldname);
-        this.getEditMusicBean().setOldalbum(this.oldalbum);
-        this.getEditMusicBean().setOldartist(this.oldartist);
+        mb.setName(this.name);
+        mb.setGenre(this.genre);
+        mb.setDuration(this.duration);
+        mb.setDate(this.date);
+        mb.setLyrics(this.lyrics);
+        mb.setArtist(this.artist);
+        mb.setAlbum(this.album);
+        mb.setDate(this.date);
 
-        if(this.getEditMusicBean().getEditMusic()){
+        mb.setGenre(this.genre);
+        mb.setOldname(this.oldname);
+        mb.setOldalbum(this.oldalbum);
+        mb.setOldartist(this.oldartist);
+
+        if(mb.getEditMusic()){
             return SUCCESS;
         }
         else
@@ -106,12 +110,14 @@ public class MusicAction extends ActionSupport implements SessionAware {
     }
     public String executeRemove(){
         // any username is accepted without confirmation (should check using RMI)
-        this.getRemoveMusicBean().setName(this.name);
-        this.getRemoveMusicBean().setArtist(this.artist);
-        this.getRemoveMusicBean().setAlbum(this.album);
+        MusicBean mb = this.getRemoveMusicBean();
+
+        mb.setName(this.name);
+        mb.setArtist(this.artist);
+        mb.setAlbum(this.album);
 
 
-        if(this.getRemoveMusicBean().getRemoveMusic()){
+        if(mb.getRemoveMusic()){
             return SUCCESS;
         }
         else
@@ -121,18 +127,22 @@ public class MusicAction extends ActionSupport implements SessionAware {
 
     public String executeViewMusicDetails(){
 
-        this.getViewMusicDetailsBean().setArtist(this.artist);
-        this.getViewMusicDetailsBean().setAlbum(this.album);
-        this.getViewMusicDetailsBean().setName(this.name);
+        MusicBean mb = this.getViewMusicDetailsBean();
+
+        mb.setArtist(this.artist);
+        mb.setAlbum(this.album);
+        mb.setName(this.name);
 
 
 
-        String message = this.getViewMusicDetailsBean().getViewMusicDetails();
+        String message = mb.getViewMusicDetails();
 
         String[] splitString = message.split(";");
+        if (message.equals("type|view_song_details;error_in_view_song_details")) {
+            return ERROR;
+        }
 
         System.out.println("\t-Song Details-");
-
         //aqui
         String [] splitString3 =splitString[3].split("\\|");
         String name = splitString3[1];

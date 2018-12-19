@@ -371,6 +371,79 @@ a:hover {
     top: 70%;
 }
 
+.insert100view {
+    font-family: Poppins-Medium;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+    display: block;
+    height: 50px;
+    padding: 0 30px 0 68px;
+    margin: auto;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    text-align: center;
+
+}
+
+.insert100view:hover {
+    color: #57b846;
+}
+
+.insert101 {
+    font-family: Poppins-Bold;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+    display: block;
+    padding: 0 30px 0 68px;
+    margin: auto;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    text-align: center;
+
+}
+
+.backView {
+    font-family: Poppins-Regular;
+    font-size: 70px;
+    line-height: 1.5;
+    color: #666666;
+    text-decoration: none;
+    position: absolute;
+}
+
+.insert102 {
+    font-family: Poppins-Bold;
+    font-size: 50px;
+    line-height: 1.5;
+    color: #666666;
+    display: block;
+    padding: 0 30px 0 68px;
+    margin: auto;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    text-align: center;
+
+}
+.insert102:hover {
+    background: #57b846;
+}
+
+.select101-form-title {
+    font-family: Poppins-Bold;
+    font-size: 50px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-bottom: 100px;
+}
+
 
 
 /*

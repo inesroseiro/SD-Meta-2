@@ -36,12 +36,12 @@
                         </a>
                     </s:div>
                     <s:div class="text-center p-t-136">
-                        <a class="cornerMenu" href="editor.jsp">
+                        <a class="cornerMenu" href="user.jsp">
                             Menu
                         </a>
                     </s:div>
                 </s:div>
-                <a class="back" href="AlbumEditor.jsp">
+                <a class="back" href="AlbumUser.jsp">
                     <
                 </a>
             </s:form>

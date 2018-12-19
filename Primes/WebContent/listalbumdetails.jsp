@@ -16,18 +16,18 @@
 				<span class="login100-form-title">
 						View Album Details
 				</span>
-				<p class ="insert100">Artist Name</p>
-				<p class = "insert100">${session.artist}</p>
-				<p class = insert100> Description </p>
-				<p class = "insert100">${session.description}</p>
-				<p class = "insert100"> Genre </p>
-				<p class = "insert100">${session.genre}</p>
-				<p class = "insert100"> Date </p>
-				<p class = "insert100>"${session.date}</p>
+				<p class ="insert101">Artist Name:</p>
+				<a class="insert100view">${session.artist}</a>
+				<p class = insert101> Description: </p>
+				<a class = "insert100view">${session.description}</a>
+				<p class = "insert101"> Genre:</p>
+				<a class = "insert100view">${session.genre}</a>
+				<p class = "insert101"> Date:</p>
+				<a class = "insert100view">${session.date}</a>
 				<p></p>
-				<p class = "insert100">Songs </p>
+				<p class = "insert101">Songs:</p>
 				<c:forEach items="${session.listaMusicas}">
-					<p class = "insert100>"${session.listaMusicas} <br> </p>
+					<a class = "insert100view">${session.listaMusicas} <br> </a>
 				</c:forEach>
 					<p></p>
 				</s:div>
@@ -46,13 +46,18 @@
 						</a>
 					</s:div>
 				</s:div>
-				<a class="back" href="AlbumEditor.jsp">
-					<
-				</a>
-			</s:form>
+				<s:if test="%{session.privilege == 'editor'}">
+					<a class="backView" href="AlbumEditor.jsp">
+						<
+					</a>
+				</s:if>
+				<s:else>
+					<a class="backView" href="AlbumUser.jsp">
+						<
+					</a>
+				</s:else>
 		</s:div>
 	</s:div>
-</s:div>
 </body>
 </body>
 </body>

@@ -16,13 +16,12 @@
 				<span class="artist100-form-title">
 						Album
 				</span>
-            <s:form action="login" method="post">
                 <s:div cssClass="container-login100-form-btn">
                         <a href="searchByAlbumUser.jsp" class="selectVal">Search by Album</a>
                     <s:div id="centering2">
                         <p></p>
                     </s:div>
-                        <a href="viewAlbumDetailsUser.jsp" class="selectVal">View Details</a>
+                        <a href="viewalbumdetails.jsp" class="selectVal">View Details</a>
                     <s:div id="centering2">
                         <p></p>
                     </s:div>
@@ -30,22 +29,23 @@
                     <s:div id="centering2">
                         <p></p>
                     </s:div>
-                        <a href="viewCriticsUser.jsp" class="selectVal">View Critics</a>
+                        <a href="viewcriticsed.jsp" class="selectVal">View Critics</a>
                     <s:div id="createAccountCenter">
                         <p></p>
                     </s:div>
+                    <s:form action="logout" method = "post">
                     <s:div class="text-center p-t-136">
                         <a class="corner" href="index.jsp">
                             Logout
                         </a>
                     </s:div>
+                    </s:form>
                     <s:div class="text-center p-t-136">
                         <a class="cornerMenu" href="user.jsp">
                             Menu
                         </a>
                     </s:div>
                 </s:div>
-            </s:form>
         </s:div>
     </s:div>
 </s:div>

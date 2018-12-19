@@ -22,11 +22,11 @@
                     <s:div id="centering2">
                         <p></p>
                     </s:div>
-                        <a href="editor.jsp" class="selectVal">Download Music</a>
+                        <a href="user.jsp" class="selectVal">Download Music</a>
                     <s:div id="centering2">
                         <p></p>
                     </s:div>
-                        <a href="editor.jsp" class="selectVal">Upload Music</a>
+                        <a href="user.jsp" class="selectVal">Upload Music</a>
                     <s:div id="createAccountCenter">
                         <p></p>
                     </s:div>

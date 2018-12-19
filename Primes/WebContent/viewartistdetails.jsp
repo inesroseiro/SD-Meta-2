@@ -5,18 +5,50 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>WDropMusic</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<title>Welcome to DropMusic</title>
 </head>
 <body>
-<s:div class="WelcomeTitle">
-	<h2> View artist details </h2>
-	<s:form action="viewartistdetails" method="post">
-		<p> Username </p>
-		<s:textfield name = "artistname" required="true" />
-		<p> </p>
-		<s:submit value="View artist details"/>
-	</s:form>
-
+<s:div cssClass="limiter">
+	<s:div cssClass="container-login100">
+		<s:div cssClass = "wrap-login100">
+				<span class="login100-form-title">
+						View Album Details
+				</span>
+			<s:form action="albumdetailseditor" method="post">
+				<s:textfield cssClass = "insert100" name = "artist" placeholder="Artist Name" required="true" />
+				<s:div id="centering">
+					<p></p>
+				</s:div>
+				<s:textfield cssClass="insert100" name = "name" placeholder="Album Name" required="true" />
+				<s:div id="centering3">
+					<p></p>
+				</s:div>
+				<s:div cssClass="container-confirm100-form-btn">
+					<s:submit cssClass = "loginVal" value="confirm"></s:submit>
+					<s:div id="createAccountCenter">
+						<p></p>
+					</s:div>
+					<s:div class="text-center p-t-136">
+						<a class="corner" href="index.jsp">
+							Logout
+						</a>
+					</s:div>
+					<s:div class="text-center p-t-136">
+						<a class="cornerMenu" href="user.jsp">
+							Menu
+						</a>
+					</s:div>
+				</s:div>
+				<a class="back" href="AlbumUser.jsp">
+					<
+				</a>
+			</s:form>
+		</s:div>
+	</s:div>
 </s:div>
+</body>
+</body>
 </body>
 </html>

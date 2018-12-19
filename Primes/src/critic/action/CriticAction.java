@@ -79,13 +79,16 @@ public class CriticAction extends ActionSupport implements SessionAware {
         String username = (String) getSession().get("username");
         System.out.println("sou o username .... " + username);
 
-        this.getInsertCriticBean().setAlbumname(albumname);
-        this.getInsertCriticBean().setArtistname(artistname);
-        this.getInsertCriticBean().setRate(rate);
-        this.getInsertCriticBean().setCritic(critic);
-        this.getInsertCriticBean().setUsername(username);
+        CriticBean ab = this.getInsertCriticBean();
 
-        if(this.getInsertCriticBean().getInsertCritic()){
+
+        ab.setAlbumname(albumname);
+        ab.setArtistname(artistname);
+        ab.setRate(rate);
+        ab.setCritic(critic);
+        ab.setUsername(username);
+
+        if(ab.getInsertCritic()){
             return SUCCESS;
         }
         else
@@ -94,13 +97,17 @@ public class CriticAction extends ActionSupport implements SessionAware {
     }
 
     public String executeViewCritics(){
+        CriticBean ab = this.getInsertCriticBean();
 
-        this.getViewCriticsBean().setUsername(this.username);
-        this.getViewCriticsBean().setAlbumname(this.albumname);
-        this.getViewCriticsBean().setArtistname(this.artistname);
+        ab.setUsername(this.username);
+        ab.setAlbumname(this.albumname);
+        ab.setArtistname(this.artistname);
 
 
-        String message = this.getViewCriticsBean().getViewCritics();
+        String message = ab.getViewCritics();
+        if (message.equals("type|view_album_critics;error in view_album_critics")) {
+            return ERROR;
+        }
 
         String[] splitStringAll = message.split(";");
 

@@ -4,6 +4,7 @@ package artist.model;
 import model.UserBean;
 
 import java.rmi.RemoteException;
+import java.util.List;
 
 public class ArtistBean extends UserBean {
 
@@ -12,6 +13,9 @@ public class ArtistBean extends UserBean {
 
     private String oldname;
     private String olddescription;
+
+    List<String> listaInformacoes;
+    List<String> listaAlbuns;
 
     public ArtistBean(){
         super();

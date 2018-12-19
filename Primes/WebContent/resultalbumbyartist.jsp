@@ -5,18 +5,54 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>WDropMusic</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<title>Welcome to DropMusic</title>
 </head>
 <body>
-<s:div class="WelcomeTitle">
-	<h2> Search albums by artist </h2>
-	<p> Artist Name </p>
-	${artist}
-
-	<c:forEach items="${session.listaAlbuns}">
-		${listaAlbuns} <br>
-	</c:forEach>
-
+<s:div cssClass="limiter">
+	<s:div cssClass="container-login100">
+		<s:div cssClass = "wrap-login100">
+				<span class="login100-form-title">
+						Search albums by artist
+				</span>
+			<p class ="insert101">Artist Name:</p>
+			<a class="insert100view">${artist}</a>
+			<p></p>
+			<p class = "insert101">Albums:</p>
+			<c:forEach items="${session.listaAlbuns}">
+				<a class = "insert100view">${listaAlbuns} <br> </a>
+			</c:forEach>
+			<p></p>
+		</s:div>
+		<s:div cssClass="container-confirm100-form-btn">
+			<s:div id="createAccountCenter">
+				<p></p>
+			</s:div>
+			<s:div class="text-center p-t-136">
+				<a class="corner" href="index.jsp">
+					Logout
+				</a>
+			</s:div>
+			<s:div class="text-center p-t-136">
+				<a class="cornerMenu" href="editor.jsp">
+					Menu
+				</a>
+			</s:div>
+		</s:div>
+		<s:if test="%{session.privilege == 'editor'}">
+			<a class="backView" href="ArtistEditor.jsp">
+				<
+			</a>
+		</s:if>
+		<s:else>
+			<a class="backView" href="ArtistUser.jsp">
+				<
+			</a>
+		</s:else>
+	</s:div>
 </s:div>
+</body>
+</body>
 </body>
 </html>

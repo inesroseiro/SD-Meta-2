@@ -41,9 +41,16 @@
                         </a>
                     </s:div>
                 </s:div>
-                <a class="back" href="AlbumEditor.jsp">
-                    <
-                </a>
+                <s:if test="%{session.privilege == 'editor'}">
+                    <a class="backView" href="AlbumEditor.jsp">
+                        <
+                    </a>
+                </s:if>
+                <s:else>
+                    <a class="backView" href="AlbumUser.jsp">
+                        <
+                    </a>
+                </s:else>
             </s:form>
         </s:div>
     </s:div>

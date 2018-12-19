@@ -22,15 +22,21 @@ public class LoginAction extends ActionSupport implements SessionAware {
     public String execute(){
 
         if(this.username != null && !username.equals("")) {
-            this.getLoginBean().setUsername(this.username);
-            this.getLoginBean().setPassword(this.password);
 
-            if(this.getLoginBean().getAuthentication().equals("editor")){
+            LoginBean lb = this.getLoginBean();
+            lb.setUsername(username);
+            lb.setPassword(password);
+
+            if(lb.getAuthentication().equals("editor")){
                 getSession().put("username", getUsername());
+                getSession().put("privilege", "editor");
+
                 return SUCCESS;
             }
-            if(this.getLoginBean().getAuthentication().equals("user")){
+            if(lb.getAuthentication().equals("user")){
                 getSession().put("username", getUsername());
+                getSession().put("privilege","user");
+
                 return LOGIN;
             }
 
@@ -41,18 +47,20 @@ public class LoginAction extends ActionSupport implements SessionAware {
     }
 
     public String execute2(){
-        this.getChangeUserRightsBean().setUsername(this.username);
-        if(this.getChangeUserRightsBean().changeUserRights()){
-                return SUCCESS;
-            }
-            return ERROR;
+        LoginBean lb = this.getChangeUserRightsBean();
+        lb.setUsername(this.username);
+        if(lb.changeUserRights()){
+            return SUCCESS;
+        }
+        return ERROR;
     }
 
     public String executeRegister(){
-        this.getRegisterBean().setUsername(username);
-        this.getRegisterBean().setPassword(password);
-        this.getChangeUserRightsBean().setUsername(this.username);
-        if(this.getRegisterBean().register()){
+        LoginBean lb = this.getRegisterBean();
+        lb.setUsername(username);
+        lb.setPassword(password);
+        //this.getChangeUserRightsBean().setUsername(this.username);
+        if(lb.register()){
             getSession().put("username", getUsername());
             //System.out.println("sou o username: " + getUsername());
             //System.out.println("session: " + getSession().put("username", getUsername()));

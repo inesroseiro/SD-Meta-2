@@ -39,61 +39,99 @@ and should reside on the classpath of the webapp (generally /WEB-INF/classes). -
       </action>
       <action name="signup" class="login.action.LoginAction" method="executeRegister">
           <result name="success">/index.jsp</result>
+          <result name="error">/error.jsp</result>
       </action>
       <action name="insertartist" class="artist.action.ArtistAction" method="execute">
           <result name="success">/editor.jsp</result>
+          <result name="error">/error.jsp</result>
+
       </action>
       <action name="insertalbum" class="album.action.AlbumAction" method="execute">
           <result name="success">/editor.jsp</result>
+          <result name="error">/error.jsp</result>
+
       </action>
       <action name="insertmusic" class="music.action.MusicAction" method="execute">
           <result name="success">/editor.jsp</result>
+          <result name="error">/error.jsp</result>
+
       </action>
       <action name="editartist" class="artist.action.ArtistAction" method="execute2">
           <result name="success">/editor.jsp</result>
+          <result name="error">/error.jsp</result>
+
       </action>
       <action name="editalbum" class="album.action.AlbumAction" method="execute2">
           <result name="success">/editor.jsp</result>
+          <result name="error">/error.jsp</result>
+
       </action>
       <action name="editmusic" class="music.action.MusicAction" method="execute2">
           <result name="success">/editor.jsp</result>
+          <result name="error">/error.jsp</result>
+
       </action>
       <action name="removeartist" class="artist.action.ArtistAction" method="executeRemove">
           <result name="success">/editor.jsp</result>
+          <result name="error">/error.jsp</result>
+
       </action>
       <action name="removealbum" class="album.action.AlbumAction" method="executeRemove">
           <result name="success">/editor.jsp</result>
+          <result name="error">/error.jsp</result>
+
       </action>
       <action name="removemusic" class="music.action.MusicAction" method="executeRemove">
           <result name="success">/editor.jsp</result>
+          <result name="error">/error.jsp</result>
+
       </action>
       <action name="editorrights" class="login.action.LoginAction" method="execute2">
-          <result name="success">/index.jsp</result>
+          <result name="success">/editor.jsp</result>
+          <result name="error">/error.jsp</result>
+
       </action>
       <action name="writecritic" class="critic.action.CriticAction" method="execute">
-          <result name="success">/user.jsp</result>
+          <result name="success">/AlbumUser.jsp</result>
+          <result name="error">/error.jsp</result>
+
       </action>
       <action name="artistdetailseditor" class="artist.action.ArtistAction" method="executeViewArtistDetails">
           <result name="success">/listartistdetails.jsp</result>
+          <result name="error">/error.jsp</result>
+
       </action>
       <action name="albumdetailseditor" class="album.action.AlbumAction" method="executeViewAlbumDetails">
           <result name="success">/listalbumdetails.jsp</result>
+          <result name="error">/error.jsp</result>
+
       </action>
       <action name="musicdetailseditor" class="music.action.MusicAction" method="executeViewMusicDetails">
           <result name="success">/listmusicdetails.jsp</result>
+          <result name="error">/error.jsp</result>
+
       </action>
       <action name="viewcriticseditor" class="critic.action.CriticAction" method="executeViewCritics">
           <result name="success">/listcriticdetails.jsp</result>
+          <result name="error">/error.jsp</result>
+
       </action>
       <action name="searchbyartist" class="artist.action.ArtistAction" method="executeSearchByArtist">
           <result name="success">/resultalbumbyartist.jsp</result>
+          <result name="error">/error.jsp</result>
+
       </action>
       <action name="searchbyalbum" class="album.action.AlbumAction" method="executeSearchByAlbum">
           <result name="success">/resultalbumbyalbum.jsp</result>
+          <result name="error">/error.jsp</result>
+
       </action>
+
       <action name="logout" class="LogoutAction" method="execute">
           <result name="LOGOUT">/index.jsp</result>
+          <result name="error">/error.jsp</result>
       </action>
+
 
 
 

@@ -46,11 +46,12 @@ public class ArtistAction extends ActionSupport implements SessionAware {
 
     public String execute(){
         // any username is accepted without confirmation (should check using RMI)
+        ArtistBean ab = this.getInsertArtistBean();
 
-            this.getInsertArtistBean().setName(this.name);
-            this.getInsertArtistBean().setDescription(this.description);
+            ab.setName(this.name);
+            ab.setDescription(this.description);
 
-            if(this.getInsertArtistBean().getInsertArtist()){
+            if(ab.getInsertArtist()){
                 return SUCCESS;
             }
 
@@ -61,13 +62,14 @@ public class ArtistAction extends ActionSupport implements SessionAware {
 
     public String execute2(){
         // any username is accepted without confirmation (should check using RMI)
+        ArtistBean ab = this.getEditArtistBean();
 
-        this.getEditArtistBean().setName(this.name);
-        this.getEditArtistBean().setDescription(this.description);
-        this.getEditArtistBean().setOldname(this.oldname);
-        this.getEditArtistBean().setOlddescription(this.olddescription);
+        ab.setName(this.name);
+        ab.setDescription(this.description);
+        ab.setOldname(this.oldname);
+        ab.setOlddescription(this.olddescription);
 
-        if(this.getEditArtistBean().getEditArtist()){
+        if(ab.getEditArtist()){
             return SUCCESS;
         }
 
@@ -76,9 +78,11 @@ public class ArtistAction extends ActionSupport implements SessionAware {
     }
 
     public String executeRemove(){
-        this.getRemoveArtistBean().setName(this.name);
+        ArtistBean ab = this.getRemoveArtistBean();
 
-        if(this.getRemoveArtistBean().getRemoveArtist()){
+        ab.setName(this.name);
+
+        if(ab.getRemoveArtist()){
             return SUCCESS;
         }
 
@@ -89,9 +93,13 @@ public class ArtistAction extends ActionSupport implements SessionAware {
 
     public String executeViewArtistDetails(){
 
+        ArtistBean ab = this.getViewArtistDetailsBean();
 
-        this.getViewArtistDetailsBean().setName(this.name);
-        String message = this.getViewArtistDetailsBean().getViewArtistDetails();
+        ab.setName(this.name);
+        String message = ab.getViewArtistDetails();
+        if (message.equals("type|view_artist_details;error in view_artist_details")) {
+            return ERROR;
+        }
 
 
         String[] splitStringAll = message.split(";");
@@ -127,15 +135,17 @@ public class ArtistAction extends ActionSupport implements SessionAware {
     }
 
     public String executeSearchByArtist(){
-        this.getSearchbyArtistBean().setName(this.name);
-        String message = this.getSearchbyArtistBean().searchByArtist();
+        ArtistBean ab = this.getInsertArtistBean();
+
+        ab.setName(this.name);
+        String message = ab.searchByArtist();
 
         if (message.equals("type|search_album_artist;error in search_album_artist")) {
             return ERROR;
         }
 
         else{
-            listaAlbuns = new ArrayList<String>();
+            listaAlbuns = new ArrayList<>();
 
             String[] splitStringAll = message.split(";");
 

@@ -49,8 +49,8 @@ public class MulticastServer extends Thread {
             socket.joinGroup(group);
 
             //files stuff
-            String userFilesString = "/Users/iroseiro/Desktop/Ficha6_WebProgramming/Primes/src/dropsrc/src/users" + database_uid + ".txt";
-            String databaseFilesString = "/Users/iroseiro/Desktop/Ficha6_WebProgramming/Primes/src/dropsrc/src/database" + database_uid + ".txt";
+            String userFilesString = "/Users/iroseiro/Downloads/Entrega SD Meta 2/Source Code/src/dropsrc/src/users" + database_uid + ".txt";
+            String databaseFilesString = "/Users/iroseiro/Downloads/Entrega SD Meta 2/Source Code/src/dropsrc/src/database" + database_uid + ".txt";
 
             File userFiles = new File(userFilesString);
             File databaseFiles = new File(databaseFilesString);

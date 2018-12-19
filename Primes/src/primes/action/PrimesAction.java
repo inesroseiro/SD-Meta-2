@@ -4,7 +4,6 @@
 package primes.action;
 
 import com.opensymphony.xwork2.ActionSupport;
-import com.sun.xml.internal.ws.api.ha.StickyFeature;
 import org.apache.struts2.interceptor.SessionAware;
 
 import java.net.MalformedURLException;

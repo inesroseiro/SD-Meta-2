@@ -14,7 +14,7 @@
 	<s:div cssClass="container-login100">
 		<s:div cssClass = "wrap-login100">
 				<span class="select100-form-title">
-						Editor Menu
+						Hello Editor ${username}
 				</span>
 			<s:div cssClass="container-login100-form-btn">
 				<a href="ArtistEditor.jsp" class="selectVal">Artist</a>

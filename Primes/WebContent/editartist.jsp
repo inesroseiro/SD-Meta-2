@@ -21,10 +21,6 @@
 				<s:div id="centering">
 					<p></p>
 				</s:div>
-				<s:textfield cssClass = "insert100" name = "olddescription" placeholder="OLD Artist Description" required="true" />
-				<s:div id="centering">
-					<p></p>
-				</s:div>
 				<s:textfield cssClass="insert100" name = "name" placeholder="NEW Artist Name" required="true" />
 				<s:div id="centering">
 					<p></p>

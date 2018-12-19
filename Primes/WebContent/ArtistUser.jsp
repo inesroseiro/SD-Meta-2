@@ -22,7 +22,7 @@
                     <s:div id="centering2">
                         <p></p>
                     </s:div>
-                        <a href="viewArtistDetailsUser.jsp" class="selectVal">View Details</a>
+                        <a href="viewartistdetails.jsp" class="selectVal">View Details</a>
                     <s:div id="createAccountCenter">
                         <p></p>
                     </s:div>

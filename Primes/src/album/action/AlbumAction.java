@@ -32,17 +32,17 @@ public class AlbumAction extends ActionSupport implements SessionAware {
         return session;
     }
 
-    public String execute(){
-        // any username is accepted without confirmation (should check using RMI)
-        String usernameEleitor = (String) getSession().get("username");
-        //System.out.println("sou o username eleitor " + usernameEleitor);
-        this.getInsertAlbumBean().setName(this.name);
-        this.getInsertAlbumBean().setDescription(this.description);
-        this.getInsertAlbumBean().setArtist(this.artist);
-        this.getInsertAlbumBean().setDate(this.date);
-        this.getInsertAlbumBean().setGenre(this.genre);
 
-        if(this.getInsertAlbumBean().getInsertAlbum()){
+
+    public String execute(){
+        AlbumBean ab = this.getInsertAlbumBean();
+        ab.setName(this.name);
+        ab.setDescription(this.description);
+        ab.setArtist(this.artist);
+        ab.setDate(this.date);
+        ab.setGenre(this.genre);
+
+        if(ab.getInsertAlbum()){
             return SUCCESS;
         }
 
@@ -53,16 +53,18 @@ public class AlbumAction extends ActionSupport implements SessionAware {
 
     public String execute2(){
 
-        this.getEditAlbumBean().setName(name);
-        this.getEditAlbumBean().setGenre(genre);
-        this.getEditAlbumBean().setDate(date);
-        this.getEditAlbumBean().setArtist(artist);
-        this.getEditAlbumBean().setDescription(description);
-        this.getEditAlbumBean().setOlddescription(olddescription);
-        this.getEditAlbumBean().setOldname(oldname);
+        AlbumBean ab = this.getEditAlbumBean();
+
+        ab.setName(name);
+        ab.setGenre(genre);
+        ab.setDate(date);
+        ab.setArtist(artist);
+        ab.setDescription(description);
+        ab.setOlddescription(olddescription);
+        ab.setOldname(oldname);
 
 
-        if(this.getEditAlbumBean().getEditAlbum()){
+        if(ab.getEditAlbum()){
             return SUCCESS;
         }
 
@@ -72,11 +74,12 @@ public class AlbumAction extends ActionSupport implements SessionAware {
     }
 
     public String executeRemove(){
+        AlbumBean ab = this.getRemoveAlbumBean();
 
-        this.getRemoveAlbumBean().setName(name);
-        this.getRemoveAlbumBean().setArtist(artist);
+        ab.setName(name);
+        ab.setArtist(artist);
 
-        if(this.getRemoveAlbumBean().getRemoveAlbum()){
+        if(ab.getRemoveAlbum()){
             return SUCCESS;
         }
         else
@@ -85,13 +88,17 @@ public class AlbumAction extends ActionSupport implements SessionAware {
     }
 
     public String executeViewAlbumDetails(){
+        AlbumBean ab = this.getViewAlbumDetailsBean();
 
 
-        this.getViewAlbumDetailsBean().setName(this.name);
-        this.getViewAlbumDetailsBean().setArtist(this.artist);
+
+        ab.setName(this.name);
+        ab.setArtist(this.artist);
 
         String message = this.getViewAlbumDetailsBean().getViewAlbumDetails();
-
+        if (message.equals("type|view_album_details;error_in_view_album_details")) {
+            return ERROR;
+        }
         String[] splitStringAll = message.split(";");
         String[] splitStringName = splitStringAll[1].split("\\|");
         String artist = splitStringName[1];
@@ -135,7 +142,9 @@ public class AlbumAction extends ActionSupport implements SessionAware {
     }
 
     public String executeSearchByAlbum(){
-        this.getSearchbyAlbumBean().setName(this.name);
+        AlbumBean ab = this.getRemoveAlbumBean();
+
+        ab.setName(this.name);
         String message = this.getSearchbyAlbumBean().searchByAlbum();
 
         if (message.equals("type|search_album_name;error in search_album_name")) {
@@ -175,12 +184,6 @@ public class AlbumAction extends ActionSupport implements SessionAware {
         return SUCCESS;
 
     }
-
-
-
-
-
-
 
     public AlbumBean getInsertAlbumBean() {
         if(!session.containsKey("insertAlbumBean"))
